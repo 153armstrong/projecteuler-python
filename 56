@@ -1,0 +1,7 @@
+y =[]
+for i in range(1,100):
+	for j in range(1,100):
+		x = list(str(i**j))
+		y.append(sum(map(int,x)))
+y.sort()
+print y		
