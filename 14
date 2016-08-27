@@ -13,4 +13,4 @@ x={}
 for i in range(3,1000000):
 	x[check(i)] = i
 	
-print x
+print x  ## The last number is the dictionary is the solution to the problem
