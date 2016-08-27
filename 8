@@ -1,0 +1,10 @@
+from operator import mul
+
+n = raw_input() ## Feed the number in one line 
+k= 13 # k=4 is the test case
+x = []
+print n
+for i in range(len(n)-k+1):
+	x.append(reduce(mul, map(int,n[i:i+k]),1))
+x.sort()
+print x
