@@ -1,0 +1,7 @@
+s = ""
+i = 1
+while len(s) < 1000001:
+	s= s+str(i)
+	i+=1	
+x = list(map(int,s))
+print x[0]*x[9]*x[99]*x[999]*x[9999]*x[99999]*x[999999]
