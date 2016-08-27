@@ -1,0 +1,11 @@
+
+from math import factorial
+y = []
+for i in range(3,10000000):
+	x= list(str(i))
+	sum= 0
+	for j in x:
+		sum+=factorial(int(j))
+	if sum == i:
+		y.append(i)
+print y
