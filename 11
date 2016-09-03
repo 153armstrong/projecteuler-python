@@ -1,0 +1,37 @@
+
+import sys
+f= open("problem11.txt",'r')
+a = []
+## Copying the 20x20 grid onto a list
+for i in f.readlines():
+	a.append(map(int,i[:-1].split(' '))) 
+max_value = 0
+
+for i in range(0,20):
+	for j in range(0,20):
+	// Horizontal 
+		if j <=16:
+			x  = a[i][j]*a[i][j+1]*a[i][j+2]*a[i][j+3]
+			if x> max_value:
+				max_value = x			
+	// Vertical 
+		if i <= 16:
+			x = a[i][j]*a[i+1][j]*a[i+2][j]*a[i+3][j]
+			if x > max_value :
+				max_value = x
+	// Lower Diagonal	
+		if i<=16 and j<=16:
+			
+			x = a[i][j]*a[i+1][j+1]*a[i+2][j+2]*a[i+3][j+3]
+
+			if x > max_value :
+				max_value = x
+	// Uppper Diagonal
+		if i<=16 and j<=16:	
+			x = a[i][j]*a[i-1][j+1]*a[i-2][j+2]*a[i-3][j+3]
+
+			if x > max_value :
+				max_value = x
+
+print max_value
+f.close()
